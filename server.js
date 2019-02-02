@@ -30,7 +30,7 @@ app.post('/webhook', middleware(config), (req, res) => {
     const message = event.message;
     client.replyMessage(event.replyToken, {
                type: 'text',
-               text: 'This is'+message.type,
+               text: 'This is '+message.type,
              });
   res.send('Hel!!')
 
