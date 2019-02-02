@@ -18,7 +18,6 @@ app.get('/', function (req, res) {
 })
 
 app.post('/webhook', middleware(config), (req, res) => {
-  res.send('Hel!!')
   const event = req.body.events[0];
 
   if (event.type === 'message') {
@@ -28,6 +27,8 @@ app.post('/webhook', middleware(config), (req, res) => {
                text: message,
              });
            }
+  res.send('Hel!!')
+
 })
 
 
