@@ -1,5 +1,6 @@
 const express = require('express')
 const middleware = require('@line/bot-sdk').middleware
+const Client = require('@line/bot-sdk').Client;
 
 const app = express()
 
@@ -8,8 +9,20 @@ const config = {
   channelSecret: 'ebf509e8a936cf361ff769f4c561dcc6'
 }
 
+const client = new Client(config);
+
+
 
 app.get('/', function (req, res) {
+    const event = req.body.events[0];
+
+    if (event.type === 'message') {
+      const message = event.message;
+      client.replyMessage(event.replyToken, {
+                 type: 'text',
+                 text: message,
+               });
+  }
     res.send('Hello World!!')
 })
 
