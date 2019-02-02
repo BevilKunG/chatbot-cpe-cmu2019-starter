@@ -39,7 +39,7 @@ app.post('/webhook', middleware(config), (req, res) => {
         "altText": "This is a buttons template",
         "template": {
             "type": "buttons",
-            "thumbnailImageUrl": "http://news.dexclub.com/wp-content/uploads/2016/09/kiminonawa-thumb.jpg",
+            "thumbnailImageUrl": "https://news.dexclub.com/wp-content/uploads/2016/09/kiminonawa-thumb.jpg",
             "imageAspectRatio": "rectangle",
             "imageSize": "contain",
             "imageBackgroundColor": "#ff7e75",
@@ -59,7 +59,7 @@ app.post('/webhook', middleware(config), (req, res) => {
                 {
                   "type": "uri",
                   "label": "Add to cart",
-                  "uri": "http://cpe.eng.cmu.ac.th/2013/"
+                  "uri": "http ://cpe.eng.cmu.ac.th/2013/"
                 },
             ]
         }
