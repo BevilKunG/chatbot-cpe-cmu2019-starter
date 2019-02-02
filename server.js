@@ -32,18 +32,19 @@ app.post('/webhook', middleware(config), (req, res) => {
     //   client.replyMessage(event.replyToken, {
 
                // });
+      // }
       client.replyMessage(event.replyToken,
       {
         "type": "template",
         "altText": "This is a buttons template",
         "template": {
             "type": "buttons",
-            "thumbnailImageUrl": "https://vignette.wikia.nocookie.net/line/images/b/bb/2015-brown.png/revision/latest?cb=20150808131630",
+            "thumbnailImageUrl": "http://www.animenewsnetwork.com/thumbnails/max400x400/cms/news/100167/kiminonawa01.jpg",
             "imageAspectRatio": "rectangle",
-            "imageSize": "cover",
+            "imageSize": "content",
             "imageBackgroundColor": "#FFFFFF",
-            "title": "Menu",
-            "text": "Please select",
+            "title": "Benz",
+            "text": "Parinya Pradit",
             "defaultAction": {
                 "type": "uri",
                 "label": "View detail",
