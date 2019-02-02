@@ -41,7 +41,7 @@ app.post('/webhook', middleware(config), (req, res) => {
             "type": "buttons",
             "thumbnailImageUrl": "https://http://news.dexclub.com/wp-content/uploads/2016/09/kiminonawa-thumb.jpg",
             "imageAspectRatio": "rectangle",
-            "imageSize": "content",
+            "imageSize": "contain",
             "imageBackgroundColor": "#ff7e75",
             "title": "Benz",
             "text": "Parinya Pradit",
