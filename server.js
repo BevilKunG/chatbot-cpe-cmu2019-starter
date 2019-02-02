@@ -39,10 +39,10 @@ app.post('/webhook', middleware(config), (req, res) => {
         "altText": "This is a buttons template",
         "template": {
             "type": "buttons",
-            "thumbnailImageUrl": "http://www.animenewsnetwork.com/thumbnails/max400x400/cms/news/100167/kiminonawa01.jpg",
+            "thumbnailImageUrl": "https://http://news.dexclub.com/wp-content/uploads/2016/09/kiminonawa-thumb.jpg",
             "imageAspectRatio": "rectangle",
             "imageSize": "content",
-            "imageBackgroundColor": "#FFFFFF",
+            "imageBackgroundColor": "#ff7e75",
             "title": "Benz",
             "text": "Parinya Pradit",
             "defaultAction": {
