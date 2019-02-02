@@ -14,21 +14,20 @@ const client = new Client(config);
 
 
 app.get('/', function (req, res) {
-    const event = req.body.events[0];
-
-    if (event.type === 'message') {
-      const message = event.message;
-      client.replyMessage(event.replyToken, {
-                 type: 'text',
-                 text: message,
-               });
-  }
     res.send('Hello World!!')
 })
 
 app.post('/webhook', middleware(config), (req, res) => {
   res.send('Hel!!')
-  console.log('webhook success')
+  const event = req.body.events[0];
+
+  if (event.type === 'message') {
+    const message = event.message;
+    client.replyMessage(event.replyToken, {
+               type: 'text',
+               text: message,
+             });
+           }
 })
 
 
