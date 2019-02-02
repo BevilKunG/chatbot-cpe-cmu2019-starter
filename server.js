@@ -27,7 +27,7 @@ app.post('/webhook', middleware(config), (req, res) => {
                text: message,
              });
            }
-  // res.send('Hel!!')
+  res.send('Hel!!')
 
 })
 
