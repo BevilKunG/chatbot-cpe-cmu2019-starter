@@ -22,10 +22,18 @@ app.post('/webhook', middleware(config), (req, res) => {
 
   if (event.type === 'message') {
     const message = event.message;
-    client.replyMessage(event.replyToken, {
-               type: 'text',
-               text: message.type,
-             });
+    if(message.type==='sticker'){
+      client.replyMessage(event.replyToken, {
+                 type: 'sticker',
+                 packageId: message.packageId,
+                 stickerId:message.stickerId
+               });
+    }else{
+      client.replyMessage(event.replyToken, {
+                 type: 'text',
+                 text: message.type
+               });
+    }
            }
   res.send('Hel!!')
 
