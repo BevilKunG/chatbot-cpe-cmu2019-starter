@@ -52,20 +52,15 @@ app.post('/webhook', middleware(config), (req, res) => {
             },
             "actions": [
                 {
-                  "type": "postback",
-                  "label": "Buy",
-                  "data": "action=buy&itemid=123"
-                },
-                {
-                  "type": "message",
-                  "label": "Add to cart",
-                  "text": "no no no"
+                  "type": "uri",
+                  "label": "Facebook",
+                  "uri": "https://www.facebook.com/prarinya.pradit"
                 },
                 {
                   "type": "uri",
-                  "label": "View detail",
-                  "uri": "http://google.com"
-                }
+                  "label": "Add to cart",
+                  "uri": "http://cpe.eng.cmu.ac.th/2013/"
+                },
             ]
         }
       })
