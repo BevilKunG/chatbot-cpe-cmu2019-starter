@@ -14,6 +14,7 @@ app.get('/', function (req, res) {
 })
 
 app.post('/webhook', middleware(config), (req, res) => {
+  res.send('Hel!!')
   console.log('webhook success')
 })
 
